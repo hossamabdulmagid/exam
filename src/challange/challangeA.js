@@ -2,12 +2,18 @@ import {useState} from 'react';
 
 
 const ChallengeA = () => {
-    let [needle, updateNeedle] = useState('');
     
+    let [needle, updateNeedle] = useState('');
+
     let haystack = 'hello world from hossam Challenge A';
+
+    let flag = false;
 
     const findNeedle = (haystack, needle) => {
         let result = haystack && haystack.indexOf(needle);
+        if (result === 0) {
+            flag = true;
+        }
         return result;
     }
 
@@ -30,7 +36,7 @@ const ChallengeA = () => {
                 }}
             />
             <p>
-                {findNeedle(haystack, needle)}
+                {!flag ? findNeedle(haystack, needle) : null}
             </p>
         </div>
     )
