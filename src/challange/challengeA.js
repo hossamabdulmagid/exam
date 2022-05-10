@@ -2,17 +2,17 @@ import {useState} from 'react';
 
 
 const ChallengeA = () => {
-    
+
     let [needle, updateNeedle] = useState('');
 
-    let haystack = 'hello world from hossam Challenge A';
+    let [haystack, updateHayStack] = useState('');
 
     let flag = false;
 
     const findNeedle = (haystack, needle) => {
         let result = haystack && haystack.indexOf(needle);
-        if (result === 0) {
-            flag = true;
+        if (result === -1) {
+            return 'your filter does not match result and return -1'
         }
         return result;
     }
@@ -23,9 +23,23 @@ const ChallengeA = () => {
         await updateNeedle(e.target.value);
     }
 
+    const HandleChangeTextArea = async e => {
+        await updateHayStack(e.target.value)
+    }
+
     return (
         <div>
             <h1>Challenge A</h1>
+            <p>HayStack</p>
+            <textarea
+                type={"text"}
+                onChange={HandleChangeTextArea}
+                rows="4"
+                cols="50"
+                placeholder={'type your haystack'}
+                autoFocus
+            />
+            <br/>
             <input
                 type={'text'}
                 onChange={HandleChange}
@@ -34,10 +48,12 @@ const ChallengeA = () => {
                     borderRadius: '5px',
                     border: '1px solid darkblue'
                 }}
+                placeholder={'type character to filter it'}
             />
             <p>
                 {!flag ? findNeedle(haystack, needle) : null}
             </p>
+            <hr/>
         </div>
     )
 
