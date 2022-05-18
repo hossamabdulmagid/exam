@@ -24,9 +24,9 @@ const ChallengeC = () => {
             </h1>
             <p>
                 a function that takes a digits count as input. And return a palindrome
-                <p>
+                <span>
                     number as output. The output’s digits count should equal the given input.
-                </p>
+                </span>
             </p>
             <input
                 className={'input'}

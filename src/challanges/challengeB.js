@@ -33,10 +33,10 @@ const ChallengeB = () => {
             </h1>
             <p>
                 function that takes two input and return a boolean value
-                <p>
+                <span>
                     depending on
                     the given first input is an Anagram or no
-                </p>
+                </span>
 
             </p>
             <input

@@ -34,16 +34,13 @@ const ChallengeD = () => {
             <p>
                 find the minimum and maximum sum among the array
                 elements,
-                <p>
+                <span>
                     and return the index of those elements as a result for both min. And
                     max. Values.
-                </p>
+                </span>
             </p>
-            [
-            min: {findIndexOfMinMax(Input).min.map(x => x)},
-            max: {findIndexOfMinMax(Input).max.map(x => x)}
-            ]
-
+            min: [{findIndexOfMinMax(Input).min.map(x => x)}],
+            max: [{findIndexOfMinMax(Input).max.map(x => x)}]
             <hr/>
         </div>
     )
