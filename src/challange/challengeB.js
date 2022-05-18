@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const ChallengeB = () => {
 
     const checkerAnagram = (str1, str2) => {
@@ -7,23 +9,42 @@ const ChallengeB = () => {
 
 
         if (string1 === string2) {
-            return true;
+            return "true";
         } else {
-            return false;
+            return "false";
         }
     }
+    
+    const [anagram, setAnagram] = useState({anagramOne: '', anagramTwo: ''})
 
-    let word1 = "PaRt    "
-    let word2 = "trAp"
+    const {anagramOne, anagramTwo} = anagram;
 
-    console.log(checkerAnagram(word1, word2))
+    const handleChange = e => {
+        const {name, value} = e.target;
+        setAnagram({...anagram, [name]: value});
+        console.log(anagram);
+    }
 
+    console.log(checkerAnagram(anagramOne, anagramTwo));
     return (
         <div>
             <h1>
                 Challenge B
             </h1>
+            <input
+                type={'text'}
+                placeholder={'first anagram'}
+                name={'anagramOne'}
+                onChange={handleChange}
+            />
+            <br/>
+            <input
+                type={'text'}
+                name={'anagramTwo'}
+                placeholder={'second anagram'}
+                onChange={handleChange}/>
             <hr/>
+            {anagramOne.length === 0 && anagramTwo.length === 0 ? null : checkerAnagram(anagramOne, anagramTwo)}
         </div>
     )
 }
