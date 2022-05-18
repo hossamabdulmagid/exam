@@ -30,7 +30,15 @@ const ChallengeA = () => {
     return (
         <div>
             <h1>Challenge A</h1>
-            <p>HayStack</p>
+
+            <p>
+                a function that returns the index of the first
+                occurrence of needle in a haystack,
+                <p>
+                    or -1 if the needle is not part of the haystack
+
+                </p>
+            </p>
             <textarea
                 type={"text"}
                 onChange={HandleChangeTextArea}
@@ -43,11 +51,7 @@ const ChallengeA = () => {
             <input
                 type={'text'}
                 onChange={HandleChange}
-                style={{
-                    padding: '9px',
-                    borderRadius: '5px',
-                    border: '1px solid darkblue'
-                }}
+                className={'input'}
                 placeholder={'type character to filter it'}
             />
             <p>

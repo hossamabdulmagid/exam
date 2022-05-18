@@ -1,7 +1,7 @@
 import './App.css';
-import ChallengeA from "./challange/challengeA";
-import ChallengeB from "./challange/challengeB";
-import ChallengeC from "./challange/challengeC";
+import ChallengeA from "./challanges/challengeA";
+import ChallengeB from "./challanges/challengeB";
+import ChallengeC from "./challanges/challengeC";
 
 const App = () => {
     return (

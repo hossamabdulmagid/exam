@@ -14,7 +14,7 @@ const ChallengeB = () => {
             return "false";
         }
     }
-    
+
     const [anagram, setAnagram] = useState({anagramOne: '', anagramTwo: ''})
 
     const {anagramOne, anagramTwo} = anagram;
@@ -31,17 +31,29 @@ const ChallengeB = () => {
             <h1>
                 Challenge B
             </h1>
+            <p>
+                function that takes two input and return a boolean value
+                <p>
+                    depending on
+                    the given first input is an Anagram or no
+                </p>
+
+            </p>
             <input
                 type={'text'}
                 placeholder={'first anagram'}
                 name={'anagramOne'}
                 onChange={handleChange}
+                className={'input'}
+
             />
             <br/>
             <input
                 type={'text'}
                 name={'anagramTwo'}
                 placeholder={'second anagram'}
+                className={'input'}
+
                 onChange={handleChange}/>
             <hr/>
             {anagramOne.length === 0 && anagramTwo.length === 0 ? null : checkerAnagram(anagramOne, anagramTwo)}
