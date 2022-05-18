@@ -34,10 +34,10 @@ const ChallengeA = () => {
             <p>
                 a function that returns the index of the first
                 occurrence of needle in a haystack,
-                <p>
-                    or -1 if the needle is not part of the haystack
+            </p>
+            <p>
+                or -1 if the needle is not part of the haystack
 
-                </p>
             </p>
             <textarea
                 type={"text"}

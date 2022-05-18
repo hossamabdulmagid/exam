@@ -31,10 +31,13 @@ const ChallengeC = () => {
             <input
                 className={'input'}
                 type={'text'}
-                placeHolder={`enter number int`}
+                placeholder={`enter number int`}
                 onChange={e => setNumber(e.target.value)}/>
             <br/>
-            {isNaN(number) ? 'you must added Number ' : palindromeNumber(number)}
+            <div>
+                {isNaN(number) ? null : palindromeNumber(number)}
+            </div>
+            <hr/>
         </div>
     )
 }
