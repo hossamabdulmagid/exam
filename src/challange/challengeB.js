@@ -1,5 +1,6 @@
 const ChallengeB = () => {
-    const anagramChecker = (str1, str2) => {
+
+    const checkerAnagram = (str1, str2) => {
 
         let string1 = str1.replaceAll(' ', '').toLowerCase().split('').sort().join('')
         let string2 = str2.replaceAll(' ', '').toLowerCase().split('').sort().join('')
@@ -12,10 +13,10 @@ const ChallengeB = () => {
         }
     }
 
-    let anagm1 = "PaRt    "
-    let anagm2 = "trAp"
+    let word1 = "PaRt    "
+    let word2 = "trAp"
 
-    console.log(anagramChecker(anagm1, anagm2))
+    console.log(checkerAnagram(word1, word2))
 
     return (
         <div>

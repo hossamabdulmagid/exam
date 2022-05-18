@@ -1,6 +1,7 @@
 import './App.css';
 import ChallengeA from "./challange/challengeA";
-import ChallengeB from "./challange/ChallengeB";
+import ChallengeB from "./challange/challengeB";
+import ChallengeC from "./challange/challengeC";
 
 const App = () => {
     return (
@@ -8,6 +9,7 @@ const App = () => {
             <header className="App-header">
                 <ChallengeA/>
                 <ChallengeB/>
+                <ChallengeC/>
             </header>
         </div>
     );
