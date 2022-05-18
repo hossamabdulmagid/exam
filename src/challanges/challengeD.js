@@ -30,6 +30,7 @@ const ChallengeD = () => {
             <h1>
                 Challenge D
             </h1>
+            let Input = [1, 2, 5, 6, 4, 11]
             <p>
                 find the minimum and maximum sum among the array
                 elements,
@@ -38,6 +39,12 @@ const ChallengeD = () => {
                     max. Values.
                 </p>
             </p>
+            [
+            min: {findIndexOfMinMax(Input).min.map(x => x)},
+            max: {findIndexOfMinMax(Input).max.map(x => x)}
+            ]
+
+            <hr/>
         </div>
     )
 }
