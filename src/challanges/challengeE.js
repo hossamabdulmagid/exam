@@ -1,27 +1,24 @@
 const ChallengeE = () => {
-    let bucket = [10, 10, 10, 5, 10, 4, 10, 10, 10, 8];
+    let bucket = [100, 100, 100, 100, 100, 100, 70, 100, 100, 100, 100, 100, 90, 100,];
+
 
     const FindTheMissingWeightBucket = (bucket) => {
-        let result = []
+        let result = [];
         for (let i = 0; i < bucket.length; i++) {
-            if (bucket[i] <= 10) {
-                if (bucket.indexOf(i) !== -1) {
-                    result.push(bucket.indexOf(i) + 1 + ` less than 100g \n\n`)
-                }
+            if (bucket[i] <= 90) {
+                result.push(`  bucket  ${i + 1} less than 100 g`);
             }
         }
-        return result.sort().join('');
+        return result;
     }
 
 
     console.log(FindTheMissingWeightBucket(bucket));
 
-
     return (
         <div>
             <h1>
                 Challenge F
-
             </h1>
             <p>
                 Write an algorithm to find the faulty bucket using a one-time scale for the ( n ) buckets
@@ -29,8 +26,9 @@ const ChallengeE = () => {
             <p>
                 in logs
             </p>
+            {FindTheMissingWeightBucket(bucket)
+            }
         </div>
-
     )
 }
 
